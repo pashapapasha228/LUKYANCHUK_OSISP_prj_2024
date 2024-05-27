@@ -12,4 +12,13 @@
 Получение данных с клавиатуры. (Подшаманить с HID)
 Возможно пофиксить соотношение флешек к их монтированному образу
   
-Что планируется:
+Что планируется: 
+
+Как запускать:
+Для начала установить пакет libusb-1.0-devel или libusb-dev
+
+Комплиляция проводилась с помощью gcc командами
+gcc -c mouse.h mouse.c interface.h interface.c func.h func.c main.c flash.h flash.c keyboard.h keyboard.c -lusb-1.0
+gcc  mouse.o interface.o func.o main.o flash.o keyboard.o -o prog -lusb-1.0
+sudo ./prog
+(Важно! Запускать программу только от имени администратора)
